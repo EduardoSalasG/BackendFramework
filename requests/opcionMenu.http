@@ -1,0 +1,7 @@
+POST http://localhost:3000/opcion-menu
+Content-Type: application/json
+
+{
+    "tenant": 2,
+    "email": "miguelsuarezl@ripley.cl"
+}

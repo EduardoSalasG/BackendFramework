@@ -1,0 +1,8 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "tenant": 2,
+    "email": "miguelsuarezl@ripley.cl",
+    "password": "Imp*3st0Regr.3s1v0"
+}
