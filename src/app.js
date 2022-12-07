@@ -3,7 +3,7 @@ import config from './config'
 import opcionMenuRoutes from './routes/opcionMenu.routes';
 import tenantsRoutes from "./routes/tenants.routes";
 import loginRoutes from "./routes/login.routes";
-
+import cors from 'cors'
 
 const app = express()
 
@@ -14,6 +14,7 @@ app.set('port', config.port)
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
+app.use(cors())
 app.use(tenantsRoutes)
 app.use(opcionMenuRoutes)
 app.use(loginRoutes)

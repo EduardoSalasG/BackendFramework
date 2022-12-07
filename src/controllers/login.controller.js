@@ -16,5 +16,5 @@ export const postLogin = async (req, res) => {
         .input("password", sql.VarChar, password)
         .query(`EXEC dbo.sp_autenticar_usuario @tenant, @email, @password`);
 
-    res.json(result.recordset);
+    res.json(result.recordset[0]);
 }    

@@ -15,5 +15,5 @@ export const postOpcionMenu = async (req, res) => {
         .input("email", sql.VarChar, email)
         .query(`EXEC dbo.sp_consulta_permisos @tenant, @email`);
 
-    res.json(result.recordset);
+    res.json(result.recordset[0]);
 }    
