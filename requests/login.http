@@ -2,7 +2,26 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "tenant": 2,
     "email": "miguelsuarezl@ripley.cl",
     "password": "Imp*3st0Regr.3s1v0"
 }
+
+#### Login
+
+POST http://localhost:3000/login1
+Content-Type: application/json
+
+{
+    "email": "miguelzambranoj@falabella.cl",
+    "password": "Pass"
+}
+
+#### Verify Token
+
+POST http://localhost:3000/logintest
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9Vc3VhcmlvIjo0LCJub21icmVfVXN1YXJpbyI6Ik1pZ3VlbCBTdWFyZXogTGVvbiIsImlkX1RlbmFudCI6Miwibm9tYnJlX1RlbmFudCI6IkNvbWVyY2lhbCBFY2NzYSBTLkEuIiwiaWRfUm9sIjoyLCJub21icmVfUm9sIjoiQ29udGFkb3IiLCJpYXQiOjE2NzA2MTgzNTYsImV4cCI6MTY3MDYxODY1Nn0.YzjinqhOFbCP0Zcg8hjh3-_7domG6Y--hf934zOIXHc
+
+#### otro
+
+GET http://localhost:3000/get-rol
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9Vc3VhcmlvIjo2LCJub21icmVfVXN1YXJpbyI6Ik1pZ3VlbCBaYW1icmFubyBKZXJleiIsImlkX1RlbmFudCI6MSwibm9tYnJlX1RlbmFudCI6IkZhbGFiZWxsYSBSZXRhaWwgUy5BLiIsImlkX1JvbCI6NCwibm9tYnJlX1JvbCI6Ik11bHRpIiwiaWF0IjoxNjcwNjM3NDg3LCJleHAiOjE2NzA2Mzc3ODd9.0ZF-griPUWIJ4ZGoz5inykItwYbM59vRnW1ENK7HV1A

@@ -5,3 +5,19 @@ Content-Type: application/json
     "tenant": 2,
     "email": "miguelsuarezl@ripley.cl"
 }
+
+### consultaModuloPorRol
+POST http://localhost:3000/consulta-modulo-por-rol
+Content-Type: application/json
+
+{
+    "id_rol": 4
+}
+
+### consultaOpMenuPorRol
+POST http://localhost:3000/consulta-opMenu-por-rol
+Content-Type: application/json
+
+{
+    "id_rol": 2
+}
