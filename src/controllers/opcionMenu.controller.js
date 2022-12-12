@@ -21,34 +21,35 @@ export const postOpcionMenu = async (req, res) => {
 
 export const consultaModuloPorRol = async (req, res) => {
 
-    const { id_rol } = req.body;
+    const { id_Rol } = req.body;
+    // console.log(req)
 
-    if(id_rol == null){
+    if(id_Rol == null){
         return res.status(400).json({msg: 'Bad Request. Please fill all fields'})
     }
     // console.log(tenant, email)
     const pool = await getConnection();
     const result = await pool
         .request()
-        .input("id_rol", sql.Int, id_rol)
-        .query(`EXEC dbo.consulta_modulo_por_rol @id_rol`);
+        .input("id_Rol", sql.Int, id_Rol)
+        .query(`EXEC dbo.consulta_modulo_por_rol @id_Rol`);
 
     res.json(result.recordset);
 }   
 
 export const consultaOpMenuPorRol = async (req, res) => {
 
-    const { id_rol } = req.body;
+    const { id_Rol } = req.body;
 
-    if(id_rol == null){
+    if(id_Rol == null){
         return res.status(400).json({msg: 'Bad Request. Please fill all fields'})
     }
     // console.log(tenant, email)
     const pool = await getConnection();
     const result = await pool
         .request()
-        .input("id_rol", sql.Int, id_rol)
-        .query(`EXEC dbo.consulta_opMenu_por_rol @id_rol`);
+        .input("id_rol", sql.Int, id_Rol)
+        .query(`EXEC dbo.consulta_opMenu_por_rol @id_Rol`);
 
     res.json(result.recordset);
 }   

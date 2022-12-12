@@ -1,1 +1,10 @@
+##getTenants
 GET http://localhost:3000/tenants
+
+### tenantById
+POST http://localhost:3000/tenant-by-id
+Content-Type: application/json
+
+{
+    "email": "miguelsuarezl@ripley.cl"
+}

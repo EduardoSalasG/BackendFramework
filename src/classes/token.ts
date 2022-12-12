@@ -1,8 +1,8 @@
-const jwt = require('jsonwebtoken')
+import jwt from'jsonwebtoken'
 
 export default class Token{
     private static seed: string = 'Secreto';
-    private static expires:string = '5m';
+    private static expires:string = '30m';
 
     constructor(){}
 
@@ -11,4 +11,17 @@ export default class Token{
             user: payload
         }, this.seed,{expiresIn:this.expires})
     };
+
+    static async validateToken(userToken:string){
+        return new Promise((resolve,reject)=>{
+            jwt.verify(userToken,this.seed,(err,decoded)=>{
+                if(err){
+                    reject();
+                }else{
+                    resolve(decoded);
+                }
+            })
+        })
+    }
+    
 }

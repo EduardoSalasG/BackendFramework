@@ -11,7 +11,7 @@ POST http://localhost:3000/consulta-modulo-por-rol
 Content-Type: application/json
 
 {
-    "id_rol": 4
+    "id_Rol": 4
 }
 
 ### consultaOpMenuPorRol
@@ -19,5 +19,5 @@ POST http://localhost:3000/consulta-opMenu-por-rol
 Content-Type: application/json
 
 {
-    "id_rol": 2
+    "id_Rol": 2
 }
