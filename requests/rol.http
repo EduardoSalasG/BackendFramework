@@ -1,0 +1,38 @@
+POST http://localhost:3000/get-roles-by-tenant
+Content-Type: application/json
+
+{
+    "id_Tenant": 1
+}
+### update-rol-by-id-usuario
+POST http://localhost:3000/update-rol-by-id-usuario
+Content-Type: application/json
+
+{
+    "id_Usuario": 1,
+    "id_Rol": 1
+
+}
+
+### delete-opcionmenu-by-id-rol
+POST http://localhost:3000/delete-opcionmenu-by-id-rol
+Content-Type: application/json
+
+{
+    "id_Rol": 1
+}
+
+### set-opmenu-by-rol-id
+POST http://localhost:3000/set-opmenu-by-rol-id
+Content-Type: application/json
+
+{
+    "id_Rol": 2,
+    "id_OpMenu": 1
+}
+
+### get-modules
+GET http://localhost:3000/get-modules
+
+### get-opsmenu
+GET http://localhost:3000/get-opsmenu

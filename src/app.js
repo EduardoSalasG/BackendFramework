@@ -3,6 +3,7 @@ import config from './config'
 import opcionMenuRoutes from './routes/opcionMenu.routes';
 import tenantsRoutes from "./routes/tenants.routes";
 import loginRoutes from "./routes/login.routes";
+import rolRoutes from "./routes/rol.routes";
 import cors from 'cors'
 
 const app = express()
@@ -18,5 +19,6 @@ app.use(cors())
 app.use(tenantsRoutes)
 app.use(opcionMenuRoutes)
 app.use(loginRoutes)
+app.use(rolRoutes)
 
 export default app
